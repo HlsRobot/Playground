@@ -1,6 +1,7 @@
 import ransom.MagazineRansomService;
 import treeGame.Tree;
 import treeGame.TreeService;
+import wordMachine.WordMachineService;
 
 public class Playground {
 
@@ -8,6 +9,7 @@ public class Playground {
         final Playground playground = new Playground();
         System.out.println("Tree game: " + playground.playWithTheTreeGame());
         System.out.println("Magazine ransom: " + playground.playWithMagazineRansom());
+        System.out.println("Word machine: " + playground.playWithTheWordMachine());
     }
 
     private int playWithTheTreeGame() {
@@ -28,5 +30,11 @@ public class Playground {
         final String ransom = "ive got some coconuts";
 
         return ransomService.checkIfRansomIsInMagazine(magazine, ransom);
+    }
+
+    private int playWithTheWordMachine() {
+        final WordMachineService wordMachineService = new WordMachineService();
+        final String command = "13 DUP 4 POP 5 DUP + DUP + -";
+        return wordMachineService.wordMachine(command);
     }
 }
