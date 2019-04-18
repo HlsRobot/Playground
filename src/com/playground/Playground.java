@@ -1,15 +1,19 @@
-import ransom.MagazineRansomService;
-import treeGame.Tree;
-import treeGame.TreeService;
-import wordMachine.WordMachineService;
+package com.playground;
+
+import com.playground.ransom.MagazineRansomService;
+import com.playground.treegame.BinaryTree;
+import com.playground.treegame.Tree;
+import com.playground.treegame.TreeService;
+import com.playground.wordmachine.WordMachineService;
 
 public class Playground {
 
     public static void main(String[] args) {
         final Playground playground = new Playground();
         System.out.println("Tree game: " + playground.playWithTheTreeGame());
-        System.out.println("Magazine ransom: " + playground.playWithMagazineRansom());
+        System.out.println("Magazine com.playground.ransom: " + playground.playWithMagazineRansom());
         System.out.println("Word machine: " + playground.playWithTheWordMachine());
+        System.out.println("Array to BST: " + playground.playWithBinaryTree());
     }
 
     private int playWithTheTreeGame() {
@@ -22,6 +26,13 @@ public class Playground {
                         new Tree(1, null, null),
                         new Tree(6, null, null)));
         return treeService.treeGames(tree);
+    }
+
+    private Tree playWithBinaryTree() {
+        final BinaryTree binaryTree = new BinaryTree();
+        final int[] arr = new int[]{1, 2, 3, 4, 5, 6, 7, 8};
+        final Tree tree = binaryTree.sortedArrayToBST(arr, 0, arr.length-1);
+        return binaryTree.sortedArrayToBST(arr, 0, arr.length-1);
     }
 
     private boolean playWithMagazineRansom() {

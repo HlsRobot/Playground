@@ -1,4 +1,4 @@
-package ransom;
+package com.playground.ransom;
 
 import java.util.HashMap;
 import java.util.Map;

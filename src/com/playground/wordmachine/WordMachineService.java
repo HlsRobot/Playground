@@ -1,4 +1,4 @@
-package wordMachine;
+package com.playground.wordmachine;
 
 import java.util.ArrayList;
 import java.util.List;
